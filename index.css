@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Fondo oscuro elegante */
+}
+
+.login-form {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: linear-gradient(135deg, #121212 0%, #2D2D2D 100%); /* Degradado profesional */
+    padding: 30px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #E63946; /* Rojo vibrante de alitas picantes */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+.login-form h2 {
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #F77F00; /* Naranja fuego */
+    text-align: center;
+    font-weight: 500;
+}
+
+.login-form .main {
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.content {
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: #1A1A1A; /* Fondo gris oscuro */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.form-img {
+    flex-basis: 50%;
+    background: linear-gradient(rgba(231, 57, 70, 0.8), rgba(231, 57, 70, 0.8)), 
+                url('https://images.unsplash.com/photo-1561758033-7e924f619b47?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-img img {
+    max-width: 100%;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+p {
+    color: #F77F00; /* Amarillo mostaza */
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.8;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn, button, input {
+    border-radius: 35px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: #F77F00; /* Naranja */
+}
+
+.login-form form {
+    margin: 30px 0;
+}
+
+.login-form input {
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #EFEFEF;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #2D2D2D;
+    background: #2D2D2D;
+    transition: 0.3s ease;
+}
+
+.login-form input:focus {
+    background: #121212;
+    border: 2px solid #F77F00; /* Naranja al enfocar */
+    color: #FFFFFF;
+}
+
+.login-form input::placeholder {
+    color: #888888;
+}
+
+.login-form button {
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 100%;
+    background: #E63946; /* Rojo vibrante */
+    border: none;
+    padding: 14px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-form button:hover {
+    background: #ff0015; /* Rojo más oscuro al hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+p.account a {
+    color: #FFD700; /* Amarillo mostaza */
+    font-weight: 500;
+}
+
+p.account a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Efectos adicionales */
+.login-form {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;  /* Ancho de la barra vertical */
+    height: 10px; /* Altura de la barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #2D2D2D;  /* Color del fondo de la barra */
+    border-radius: 5px;   /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F77F00;  /* Color naranja de la barra */
+    border-radius: 5px;   /* Bordes redondeados */
+    border: 2px solid #2D2D2D; /* Borde para mejor contraste */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E63946;  /* Color rojo al pasar el mouse */
+}
+
+/* Para Firefox (versiones recientes) */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #F77F00 #2D2D2D;
+}

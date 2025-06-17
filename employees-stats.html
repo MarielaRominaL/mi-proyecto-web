@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia - Estadísticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/employees-stats.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="compact-header">
+            <h1>ASISTENCIA - ESTADÍSTICAS</h1>
+            <p>Control de empleados y registros</p>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Sección de empleados -->
+            <section class="employee-section">
+                <div class="section-header">
+                    <h2><span>📋</span> EMPLEADOS</h2>
+                    <div class="filters">
+                        <select class="filter-select">
+                            <option>FILTROS</option>
+                            <option>ACADEMY FILTROS</option>
+                            <option>CENTRE FILTROS</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="employee-list">
+                    <div class="employee-card">
+                        <div class="employee-avatar">JP</div>
+                        <div class="employee-info">
+                            <h3>Sebastian Caceres</h3>
+                            <p>Cajero | Matutino</p>
+                        </div>
+                        <div class="attendance-status present"></div>
+                    </div>
+                    
+                    <div class="employee-card">
+                        <div class="employee-avatar">MG</div>
+                        <div class="employee-info">
+                            <h3>Mariela Limachi</h3>
+                            <p>Cocinera | Vespertino</p>
+                        </div>
+                        <div class="attendance-status absent"></div>
+                    </div>
+                    
+                    <!-- Más empleados... -->
+                </div>
+            </section>
+
+            <!-- Sección de estadísticas -->
+            <section class="stats-section">
+                <div class="section-header">
+                    <h2><span>📊</span> ESTADÍSTICAS</h2>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <h3>Asistencia Hoy</h3>
+                        <div class="stat-value">85%</div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3>Puntualidad</h3>
+                        <div class="stat-value">92%</div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Más estadísticas... -->
+                </div>
+                
+                <div class="attendance-chart">
+                    <h3>Registros Semanales</h3>
+                    <div class="chart-placeholder">
+                        <!-- Aquí iría tu gráfico (Chart.js o similar) -->
+                        <p>📈 Gráfico de asistencia por día de la semana</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/employees-stats.js"></script>
+</body>
+</html>

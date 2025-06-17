@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/user-register.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="compact-header">
+            <h1>REGISTRO DE EMPLEADOS</h1>
+            <p>Complete el formulario para registrar nuevo personal</p>
+        </header>
+
+        <div class="registration-content">
+            <div class="form-container">
+                <form id="employeeForm">
+                    <div class="form-group">
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apellidos">APELLIDOS</label>
+                        <input type="text" id="apellidos" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="identificacion">IDENTIFICACIÓN</label>
+                        <input type="text" id="identificacion" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fechaNacimiento">FECHA DE NACIMIENTO</label>
+                        <input type="date" id="fechaNacimiento" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cargo">CARGO</label>
+                        <select id="cargo" required>
+                            <option value="">Seleccione un cargo</option>
+                            <option value="Cajero">Cajero</option>
+                            <option value="Mesero">Mesero</option>
+                            <option value="Cocinero">Cocinero de alitas</option>
+                            <option value="Ayudante">Ayudante de cocina</option>
+                            <option value="Supervisor">Supervisor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="horario">HORARIO</label>
+                        <select id="horario" required>
+                            <option value="">Seleccione un horario</option>
+                            <option value="Matutino">Matutino (8am-4pm)</option>
+                            <option value="Vespertino">Vespertino (4pm-12am)</option>
+                            <option value="Completo">Completo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">CANCELAR</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">GUARDAR</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="camera-section">
+                <button type="button" class="btn btn-face-test" id="startCamera">INICIAR PRUEBA DE ROSTRO</button>
+                
+                <div class="camera-container">
+                    <video id="video" autoplay muted></video>
+                    <div class="camera-placeholder">
+                        <div class="camera-icon">📷</div>
+                        <p>Cámara desactivada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="compact-footer">
+            <p>Sistema de Reconocimiento Facial © 2023 - Restaurante de Alitas</p>
+        </footer>
+    </div>
+
+    <script src="/scripts/user-register.js"></script>
+</body>
+</html>

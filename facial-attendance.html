@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reconocimiento Facial</title>
+    <link rel="stylesheet" href="/styles/facial-attendance.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header class="compact-header">
+            <h1>RECONOCIMIENTO FACIAL</h1>
+            <p>Control de acceso</p>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="camera-section">
+                <div class="camera-container">
+                    <video id="video" autoplay muted></video>
+                </div>
+                <div class="recognition-status">
+                    <div class="status-indicator" id="status-indicator"></div>
+                    <p id="status-message">Buscando rostros...</p>
+                </div>
+            </div>
+
+            <div class="employee-profile">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        SC
+                    </div>
+                    <h3>Sebastian Caceres Cuenca</h3>
+                    <div class="employee-id">ID: SCC-2023-001</div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">💼</span>
+                        <div>
+                            <div class="detail-title">Cajero</div>
+                            <div class="detail-content">Ventas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon">📅</span>
+                        <div>
+                            <div class="detail-title">Estado</div>
+                            <div class="detail-content status-active">
+                                <span class="status-dot"></span>
+                                Activo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: 'user' },
+                    audio: false
+                });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("Error al acceder a la cámara:", error);
+                alert("No se pudo acceder a la cámara: " + error.message);
+            }
+        }
+        
+        window.addEventListener('DOMContentLoaded', startCamera);
+        
+        window.addEventListener('beforeunload', () => {
+            if (video.srcObject) {
+                video.srcObject.getTracks().forEach(track => track.stop());
+            }
+        });
+    </script>
+</body>
+</html>
